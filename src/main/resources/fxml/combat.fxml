@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#keyPress" prefHeight="380.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dylanJaxon.combat">
+   <children>
+      <ImageView fx:id="imgBackground" fitHeight="277.0" fitWidth="660.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images-combat/forest-bg.png" />
+         </image>
+      </ImageView>
+      <Label layoutY="272.0" prefHeight="108.0" prefWidth="660.0" styleClass="gradient-light-brown-double" stylesheets="@../styles/customStyles.css">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fx:id="imgAttack" fitHeight="64.0" fitWidth="64.0" layoutX="179.0" layoutY="283.0" onMouseClicked="#ability" onMouseEntered="#hoverOpen" onMouseExited="#hoverExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images-combat/mage-0.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="imgDefense" fitHeight="64.0" fitWidth="64.0" layoutX="258.0" layoutY="283.0" onMouseClicked="#ability" onMouseEntered="#hoverOpen" onMouseExited="#hoverExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images-combat/mage-1.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="149.0" layoutX="14.0" layoutY="286.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images-combat/dialoguebox.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblYH" alignment="CENTER" layoutX="14.0" layoutY="286.0" prefHeight="35.0" prefWidth="149.0" text="Health: 100/100">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="149.0" layoutX="14.0" layoutY="331.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images-combat/dialoguebox.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblYM" alignment="CENTER" layoutX="14.0" layoutY="331.0" prefHeight="35.0" prefWidth="149.0" text="Mana: 100/100">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHeal" fitHeight="64.0" fitWidth="92.0" layoutX="416.0" layoutY="283.0" onMouseClicked="#ability" onMouseEntered="#hoverOpen" onMouseExited="#hoverExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images-combat/potion.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="149.0" layoutX="497.0" layoutY="286.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images-combat/dialoguebox.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblEH" alignment="CENTER" layoutX="497.0" layoutY="286.0" prefHeight="35.0" prefWidth="149.0" text="Health: 100/100">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="149.0" layoutX="497.0" layoutY="331.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images-combat/dialoguebox.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblEM" alignment="CENTER" layoutX="497.0" layoutY="331.0" prefHeight="35.0" prefWidth="149.0" text="Mana: 100/100">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgYou" fitHeight="110.0" fitWidth="200.0" layoutX="163.0" layoutY="129.0" onMouseEntered="#hoverOpen" onMouseExited="#hoverExit" pickOnBounds="true" preserveRatio="true" rotate="180.0" smooth="false">
+         <image>
+            <Image url="@../images-combat/mage-stance.png" />
+         </image>
+         <rotationAxis>
+            <Point3D y="180.0" z="1.0" />
+         </rotationAxis>
+      </ImageView>
+      <ImageView fx:id="imgEnemy" fitHeight="110.0" fitWidth="200.0" layoutX="390.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images-combat/orc-stance.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblInfo" alignment="TOP_LEFT" layoutX="183.0" layoutY="14.0" prefHeight="102.0" prefWidth="288.0" styleClass="gradient-light-brown-double-border" stylesheets="@../styles/customStyles.css" text=" &#10; Shoots a Fireball, &#10; dealing % damage&#10;" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAbility" layoutX="191.0" layoutY="20.0" prefHeight="30.0" prefWidth="270.0" text="Fireball" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+         </effect>
+      </Label>
+      <Label fx:id="lblEnemy" alignment="TOP_LEFT" layoutX="497.0" layoutY="237.0" prefHeight="27.0" prefWidth="149.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+         </effect>
+      </Label>
+      <Label fx:id="lblYou" alignment="TOP_LEFT" layoutX="14.0" layoutY="237.0" prefHeight="30.0" prefWidth="247.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+         </effect>
+      </Label>
+      <Label fx:id="lblButtons" alignment="CENTER" layoutX="176.0" layoutY="348.0" prefHeight="32.0" prefWidth="312.0" text="Your Abilitiy Buttons" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgPunch" fitHeight="64.0" fitWidth="64.0" layoutX="337.0" layoutY="283.0" onMouseClicked="#ability" onMouseEntered="#hoverOpen" onMouseExited="#hoverExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images-combat/punch.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="imgReturn" fitHeight="64.0" fitWidth="64.0" layoutX="298.0" layoutY="283.0" onMouseClicked="#leave" onMouseEntered="#hoverOpen" onMouseExited="#hoverExit" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images-combat/return.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblContinue" focusTraversable="false" layoutX="247.0" layoutY="227.0" nodeOrientation="LEFT_TO_RIGHT" text="Press SPACE to continue..." textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStory" alignment="CENTER" focusTraversable="false" layoutY="246.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="134.0" prefWidth="660.0" styleClass="gradient-light-brown-double-border" stylesheets="@../styles/customStyles.css" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="46.0" fitWidth="52.0" layoutX="600.0" layoutY="12.0" onMouseClicked="#quit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images-menu/exitRight.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

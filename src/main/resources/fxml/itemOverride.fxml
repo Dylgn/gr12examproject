@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="390.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dylanJaxon.itemOverride">
+   <children>
+      <TextField fx:id="txtShrtSrdDmg" layoutX="83.0" layoutY="33.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="17.0" layoutY="37.0" text="Short Sword" />
+      <TextField fx:id="txtLngSrdDmg" layoutX="83.0" layoutY="58.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="18.0" layoutY="62.0" text="Long Sword" />
+      <TextField fx:id="txtSqrSrdDmg" layoutX="83.0" layoutY="83.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="10.0" layoutY="87.0" text="Squire's Blade" />
+      <TextField fx:id="txtKntSrdDmg" layoutX="83.0" layoutY="108.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="7.0" layoutY="112.0" text="Knight's Blade" />
+      <TextField fx:id="txtKngSrdDmg" layoutX="83.0" layoutY="133.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="14.0" layoutY="137.0" text="King's Sword" />
+      <Label layoutX="92.0" layoutY="14.0" text="Damage" />
+      <TextField fx:id="txtShrtSrdDur" layoutX="149.0" layoutY="33.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtLngSrdDur" layoutX="149.0" layoutY="58.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtSqrSrdDur" layoutX="149.0" layoutY="83.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtKntSrdDur" layoutX="149.0" layoutY="108.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtKngSrdDur" layoutX="149.0" layoutY="133.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="153.0" layoutY="14.0" text="Durability" />
+      <Label layoutX="31.0" layoutY="14.0" text="Swords">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtShrtBowDmg" layoutX="83.0" layoutY="216.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="28.0" layoutY="220.0" text="Short Bow" />
+      <TextField fx:id="txtHntBowDmg" layoutX="83.0" layoutY="241.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="14.0" layoutY="270.0" text="Recurve Bow" />
+      <TextField fx:id="txtRcvBowDmg" layoutX="83.0" layoutY="266.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="30.0" layoutY="295.0" text="Long Bow" />
+      <TextField fx:id="txtLngBowDmg" layoutX="83.0" layoutY="291.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="14.0" layoutY="246.0" text="Hunting Bow" />
+      <TextField fx:id="txtElvBowDmg" layoutX="83.0" layoutY="316.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="27.0" layoutY="320.0" text="Elven Bow" />
+      <Label layoutX="92.0" layoutY="197.0" text="Damage" />
+      <TextField fx:id="txtShrtBowDur" layoutX="149.0" layoutY="216.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtHntBowDur" layoutX="149.0" layoutY="241.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtRcvBowDur" layoutX="149.0" layoutY="266.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtLngBowDur" layoutX="149.0" layoutY="291.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtElvBowDur" layoutX="149.0" layoutY="316.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="153.0" layoutY="197.0" text="Durability" />
+      <Label layoutX="35.0" layoutY="199.0" text="Bows">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtWdnStfDmg" layoutX="376.0" layoutY="39.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="303.0" layoutY="43.0" text="Wooden Staff" />
+      <TextField fx:id="txtQtzStfDmg" layoutX="376.0" layoutY="64.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="313.0" layoutY="68.0" text="Quartz Staff" />
+      <TextField fx:id="txtAprStfDmg" layoutX="376.0" layoutY="89.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="291.0" layoutY="93.0" text="Apprentice Staff" />
+      <TextField fx:id="txtSapStfDmg" layoutX="376.0" layoutY="114.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="308.0" layoutY="118.0" text="Saphire Staff" />
+      <TextField fx:id="txtMasStfDmg" layoutX="376.0" layoutY="139.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="305.0" layoutY="143.0" text="Master's Staff" />
+      <Label layoutX="385.0" layoutY="20.0" text="Damage" />
+      <TextField fx:id="txtWdnStfDur" layoutX="442.0" layoutY="39.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtQtzStfDur" layoutX="442.0" layoutY="64.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtAprStfDur" layoutX="442.0" layoutY="89.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtSapStfDur" layoutX="442.0" layoutY="114.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtMasStfDur" layoutX="442.0" layoutY="139.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="446.0" layoutY="20.0" text="Durability" />
+      <Label layoutX="324.0" layoutY="20.0" text="Staves">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCltAmrPrt" layoutX="384.0" layoutY="220.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="313.0" layoutY="224.0" text="Cloth Armour" />
+      <TextField fx:id="txtLthAmrPrt" layoutX="384.0" layoutY="245.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="302.0" layoutY="249.0" text="Leather Armour" />
+      <TextField fx:id="txtChnAmrPrt" layoutX="384.0" layoutY="270.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="310.0" layoutY="274.0" text="Chain Armour" />
+      <TextField fx:id="txtPltAmrPrt" layoutX="384.0" layoutY="295.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="314.0" layoutY="299.0" text="Plate Armour" />
+      <TextField fx:id="txtKntAmrPrt" layoutX="384.0" layoutY="320.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="299.0" layoutY="324.0" text="Knight's Armour" />
+      <Label layoutX="392.0" layoutY="196.0" text="Protection" />
+      <TextField fx:id="txtCltAmrDur" layoutX="450.0" layoutY="220.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtLthAmrDur" layoutX="450.0" layoutY="245.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtChnAmrDur" layoutX="450.0" layoutY="270.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtPltAmrDur" layoutX="450.0" layoutY="295.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="txtKntAmrDur" layoutX="450.0" layoutY="320.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="453.0" layoutY="196.0" text="Durability" />
+      <Label layoutX="329.0" layoutY="196.0" text="Armour">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="35.0" layoutY="352.0" mnemonicParsing="false" onAction="#btnUpload" text="Change Stats" />
+      <Button layoutX="120.0" layoutY="352.0" mnemonicParsing="false" onAction="#btnReturn" text="Return To Menu" />
+   </children>
+</AnchorPane>

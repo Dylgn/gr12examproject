@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPress" onKeyReleased="#keyRelease" prefHeight="430.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dylanJaxon.town">
+   <children>
+      <AnchorPane fx:id="ancCastle" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="390.0">
+         <children>
+            <ImageView fitHeight="440.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../maps/castle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="60.0" layoutX="162.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+               <image>
+                  <Image url="@../Images-Inventory/left.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="polCastleEntry" fill="DODGERBLUE" layoutX="195.0" layoutY="390.0" points="-50.0, 40.0, 50.0, 40.0, 50.0, 33.0, -50.0, 33.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polCastleWalls" fill="DODGERBLUE" layoutX="50.0" layoutY="-30.0" points="-50.0, 462.6875, 341.0, 463.0, 341.0, 30.0, 333.0, 319.0, 333.0, 456.0, 196.0, 456.0, 196.0, 463.0, 93.0, 463.0, 93.0, 456.0, -43.0, 456.0, -43.0, 319.0, 10.0, 319.0, 31.0, 294.0, 83.0, 287.0, 93.0, 305.0, 196.0, 305.0, 207.0, 287.0, 262.0, 287.0, 268.0, 313.0, 333.0, 313.0, 341.0, 30.0, -50.0, 30.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polKing" fill="DODGERBLUE" layoutX="192.0" layoutY="249.0" points="-48.0, 15.0, 49.0, 15.0, 49.0, 28.0, -48.0, 28.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Pane fx:id="panCastlePlayer" layoutX="177.0" layoutY="294.0" prefHeight="52.0" prefWidth="31.0">
+               <children>
+                  <Polygon fx:id="polCastlePlayer" fill="DODGERBLUE" layoutX="50.0" layoutY="11.0" points="-50.0, 36.5333251953125, -19.0, 36.5333251953125, -19.0, -10.0, -50.0, -10.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fx:id="imgCastlePlayer" fitHeight="52.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images-world/warrior-back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="169.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../king.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="68.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../guard-front.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="14.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../guard-front.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="261.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../guard-front.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="316.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../guard-front.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancTown" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="391.0" stylesheets="@../styles/Styles.css" visible="false">
+         <children>
+            <ImageView fitHeight="397.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images-menu/menuwall.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="63.0" layoutY="14.0" text="Welcome to The&#10;Town of Stonehovel" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="109.0" text="Where Would You Like to Go?" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button focusTraversable="false" layoutX="196.0" layoutY="146.0" mnemonicParsing="false" onAction="#btnCastle" prefHeight="65.0" prefWidth="183.0" styleClass="record-sales" text="Castle">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" layoutX="12.0" layoutY="146.0" mnemonicParsing="false" onAction="#btnShop" prefHeight="65.0" prefWidth="183.0" styleClass="record-sales" text="Shop">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" layoutX="12.0" layoutY="211.0" mnemonicParsing="false" onAction="#btnSmith" prefHeight="65.0" prefWidth="183.0" styleClass="record-sales" text="Blacksmith">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" layoutX="196.0" layoutY="211.0" mnemonicParsing="false" onAction="#btnLumberJack" prefHeight="65.0" prefWidth="183.0" styleClass="record-sales" text="Lumber Jack">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" layoutX="13.0" layoutY="276.0" mnemonicParsing="false" onAction="#btnForest" prefHeight="65.0" prefWidth="366.0" styleClass="record-sales" text="Exit To Forest">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancShop" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="555.0" visible="false">
+         <children>
+            <ImageView fx:id="imgShop" fitHeight="365.0" fitWidth="555.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../maps/Shop.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="60.0" layoutX="48.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+               <image>
+                  <Image url="@../Images-Inventory/redLeft.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="polShopWall" fill="DODGERBLUE" layoutX="64.0" layoutY="123.0" points="-57.0, 40.0, 144.0, 40.0, 144.0, -115.0, 202.0, -115.0, 202.0, -48.0, 491.0, -48.0, 491.0, -123.0, -64.0, -123.0, -64.0, 200.75, 491.0, 202.0, 491.0, 191.0, 491.0, -48.0, 480.0, -48.0, 480.0, 191.0, 62.0, 191.0, 62.0, 202.0, -38.0, 202.0, -38.0, 190.0, -57.0, 191.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polShopEntry" fill="DODGERBLUE" layoutX="78.0" layoutY="285.0" points="-50.0, 40.0, 50.0, 40.0, 50.0, 31.0, -50.0, 31.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Pane fx:id="panShopPlayer" layoutX="78.0" layoutY="253.0" prefHeight="52.0" prefWidth="31.0">
+               <children>
+                  <Polygon fx:id="polShopPlayer" fill="DODGERBLUE" layoutX="49.0" layoutY="10.0" points="-50.0, 40.0, -19.0, 40.0, -19.0, -10.0, -50.0, -10.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fx:id="imgShopPlayer" fitHeight="52.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images-world/warrior-back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="80.0" fitWidth="60.0" layoutX="115.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images-world/shopkeeper-front.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="plyShopInteract" fill="DODGERBLUE" layoutX="138.0" layoutY="180.0" points="-138.0, 3.0, 101.0, 3.0, 101.0, -180.0, 73.0, -180.0, 73.0, -34.0, -138.0, -34.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Label layoutX="264.0" layoutY="63.0" text="Label" />
+            <Label fx:id="lblShopInteract" layoutX="43.0" layoutY="14.0" text="Press E to Interact" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Polygon fx:id="plyShopInteract" fill="DODGERBLUE" layoutX="138.0" layoutY="180.0" points="-138.0, 3.0, 101.0, 3.0, 101.0, -180.0, 73.0, -180.0, 73.0, -34.0, -138.0, -34.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Label layoutX="264.0" layoutY="63.0" text="Label" />
+            <Label fx:id="lblShopInteract" layoutX="43.0" layoutY="14.0" text="Press E to Interact" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancSmith" prefHeight="325.0" prefWidth="555.0" visible="false">
+         <children>
+            <ImageView fx:id="imgSmith" fitHeight="365.0" fitWidth="555.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../maps/blackmith.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="60.0" layoutX="47.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+               <image>
+                  <Image url="@../Images-Inventory/redLeft.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="polSmithWalls" fill="DODGERBLUE" layoutX="50.0" layoutY="284.0" points="-50.0, 40.0, -41.0, 40.0, -41.0, -122.125, 157.0, -122.125, 157.0, -181.0, 207.0, -181.0, 207.0, -240.0, 207.0, -271.0, 412.0, -271.0, 389.0, -226.0, 389.0, -181.0, 494.0, -181.0, 494.0, -86.0, 426.0, -86.0, 435.0, -57.0, 494.0, -57.0, 494.0, -9.0, 465.0, -9.0, 426.0, 18.0, 426.0, 27.0, 84.0, 27.0, 84.0, 39.75, -28.0, 39.75, -28.0, 27.0, -41.0, 27.0, -41.0, 40.0, 505.0, 39.75, 505.0, -181.0, 505.0, -284.0, 148.0, -284.0, -50.0, -284.0, -50.0, -134.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polSmithEntry" fill="DODGERBLUE" layoutX="79.0" layoutY="284.0" points="-50.0, 40.0, 50.0, 40.0, 50.0, 25.0, -50.0, 25.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Pane fx:id="panSmithPlayer" layoutX="69.0" layoutY="246.0" prefHeight="52.0" prefWidth="31.0">
+               <children>
+                  <Polygon fx:id="polSmithPlayer" fill="DODGERBLUE" layoutX="49.0" layoutY="10.0" points="-50.0, 40.0, -19.0, 40.0, -19.0, -10.0, -50.0, -10.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fx:id="imgSmithPlayer" fitHeight="52.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images-world/warrior-back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="lblSmithInteract" layoutX="41.0" layoutY="14.0" text="Press E to Interact" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="80.0" fitWidth="60.0" layoutX="117.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images-world/blacksmith-front.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="plySmithInteract" fill="DODGERBLUE" layoutX="148.0" layoutY="190.0" points="-138.0, 3.0, 101.0, 3.0, 101.0, -180.0, 73.0, -180.0, 73.0, -34.0, -138.0, -34.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polUpgr" fill="DODGERBLUE" layoutX="505.0" layoutY="60.0" points="-79.0, 263.75, 50.0, 263.75, 50.0, -60.0, -79.0, -60.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Label fx:id="lblSmithUpgrade" layoutX="53.0" layoutY="27.0" text="Press E to Interact" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="ancUpgrade" layoutX="7.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="318.0" stylesheets="@../styles/customStyles.css" visible="false">
+               <children>
+                  <ImageView fx:id="imgInv1" fitHeight="325.0" fitWidth="324.0" layoutX="-6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../Images-Inventory/panel_beige.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="56.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonLong_brown.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="4.0" layoutY="7.0" prefHeight="65.0" prefWidth="305.0" text="Blacksmith" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="21.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="81.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="141.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="51.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="111.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="213.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="213.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblUprProt" layoutX="25.0" layoutY="215.0" prefHeight="27.0" prefWidth="95.0" text="Damage">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="240.0" prefHeight="27.0" prefWidth="95.0" text="Durability">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDmgUpr" layoutX="120.0" layoutY="215.0" prefHeight="27.0" prefWidth="95.0" text=": 0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDurUpr" layoutX="120.0" layoutY="239.0" prefHeight="27.0" prefWidth="95.0" text=": 0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgUpr0" fitHeight="45.0" fitWidth="41.0" layoutX="31.0" layoutY="94.0" onMouseClicked="#btnUpr" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgUpr1" fitHeight="45.0" fitWidth="41.0" layoutX="90.0" layoutY="94.0" onMouseClicked="#btnUpr" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgUpr2" fitHeight="45.0" fitWidth="41.0" layoutX="150.0" layoutY="94.0" onMouseClicked="#btnUpr" pickOnBounds="true" preserveRatio="true" styleClass="round-button-border" />
+                  <ImageView fx:id="imgUpr3" fitHeight="45.0" fitWidth="41.0" layoutX="60.0" layoutY="159.0" onMouseClicked="#btnUpr" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgUpr4" fitHeight="45.0" fitWidth="41.0" layoutX="120.0" layoutY="159.0" onMouseClicked="#btnUpr" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgUpr5" fitHeight="45.0" fitWidth="41.0" layoutX="222.0" layoutY="94.0" onMouseClicked="#btnUpr" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Item-Sprites/shortSword.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgUpr6" fitHeight="45.0" fitWidth="41.0" layoutX="222.0" layoutY="159.0" onMouseClicked="#btnUpr" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Item-Sprites/clothArmour.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="154.0" layoutX="185.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonLong_blue.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="185.0" layoutY="214.0" onMouseClicked="#btnUpgrade" prefHeight="27.0" prefWidth="105.0" text="Upgrade">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="27.0" fitWidth="154.0" layoutX="185.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images-Inventory/buttonLong_blue.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="185.0" layoutY="240.0" onMouseClicked="#btnRepair" prefHeight="27.0" prefWidth="105.0" text="Repair">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUprCost" alignment="CENTER" layoutX="2.0" layoutY="269.0" prefHeight="27.0" prefWidth="318.0" text="Upgrade Cost: 5g" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRepairCost" alignment="CENTER" layoutX="3.0" layoutY="290.0" prefHeight="27.0" prefWidth="318.0" text="Repair Cost: 5g" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBal" alignment="CENTER" layoutX="114.0" layoutY="66.0" prefHeight="17.0" prefWidth="105.0" text="Gold: " textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancWizard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="390.0" visible="false">
+         <children>
+            <ImageView fx:id="imgTower" fitHeight="440.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../maps/wizardTower.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="60.0" layoutX="278.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@../Images-Inventory/redLeft.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="polWizardWall" fill="DODGERBLUE" layoutX="50.0" layoutY="209.0" points="-50.0, 12.0, -40.0, 12.0, -4.0, 12.0, 18.0, 30.0, 60.28570556640625, 29.0, 60.28570556640625, -51.0, 55.0, -116.0, 112.0, -116.0, 112.0, -133.0, 177.0, -133.0, 177.0, -116.0, 230.0, -116.0, 230.0, -91.0, 278.0, -91.0, 278.0, -154.0, 315.0, -116.0, 334.0, -46.0, 334.0, 30.0, 295.0, 121.0, 251.0, 165.0, 204.0, 180.0, 78.0, 180.0, 18.0, 149.0, -17.0, 109.0, -40.0, 63.0, -40.0, 12.0, -50.0, 12.0, -50.0, 187.6258544921875, 341.0, 187.6258544921875, 341.0, -209.0, -50.0, -209.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polWizardEntry" fill="DODGERBLUE" layoutX="327.0" layoutY="182.0" points="7.0, 36.5, 47.5, 36.5, 47.5, -1.75, 7.0, -1.75" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polWizardTable" fill="DODGERBLUE" layoutX="223.0" layoutY="320.0" points="-40.0, 31.0, -22.0, 31.0, -22.0, 18.0, -14.0, 9.0, 12.0, 3.0, 12.0, -45.0, -22.0, -45.0, -22.0, -60.0, -40.0, -60.0, -40.0, -45.0, -70.0, -45.0, -70.0, 3.0, -48.0, 9.0, -40.0, 18.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Pane fx:id="panWizardPlayer" layoutX="320.0" layoutY="228.0" prefHeight="65.0" prefWidth="60.0">
+               <children>
+                  <Polygon fx:id="polWizardPlayer" fill="DODGERBLUE" layoutX="49.0" layoutY="10.0" points="-50.0, 40.0, -19.0, 40.0, -19.0, -10.0, -50.0, -10.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fx:id="imgWizardPlayer" fitHeight="52.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images-world/warrior-back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="80.0" fitWidth="60.0" layoutX="76.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images-world/wizard-right.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblWizardInteract" layoutX="119.0" layoutY="94.0" text="Press E to Interact" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Polygon fx:id="plyWizardInteract" fill="DODGERBLUE" layoutX="194.0" layoutY="179.0" points="-50.0, 101.0, -50.0, -46.0, -98.0, -46.0, -98.0, 60.0, -181.0, 60.0, -181.0, 101.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancLumberjack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="555.0" visible="false">
+         <children>
+            <ImageView fx:id="imgLumber" fitHeight="365.0" fitWidth="555.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../maps/lumberJack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="60.0" layoutX="50.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+               <image>
+                  <Image url="@../Images-Inventory/redLeft.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="polLumberjackWalls" fill="DODGERBLUE" layoutX="50.0" layoutY="284.0" points="-50.0, 40.0, -41.0, 33.0, -41.0, -271.0, 315.0, -271.0, 315.0, -134.0, 494.0, -134.0, 494.0, 27.0, 477.0, 7.0, 465.0, -49.0, 426.0, -83.0, 378.0, -39.0, 337.0, -12.0, 337.0, 27.0, 81.0, 27.0, 81.0, 39.75, -20.0, 39.75, -20.0, 27.0, -41.0, 27.0, -50.0, 39.75, 505.0, 39.75, 505.0, -181.0, 505.0, -284.0, -50.0, -284.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polLumberjackEntry" layoutX="79.0" layoutY="284.0" points="-50.0, 40.0, 50.0, 40.0, 50.0, 26.0, -50.0, 26.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Pane fx:id="panLumberJackPlayer" layoutX="99.0" layoutY="246.0" prefHeight="65.0" prefWidth="60.0">
+               <children>
+                  <Polygon fx:id="polLumberJackPlayer" fill="DODGERBLUE" layoutX="49.0" layoutY="10.0" points="-50.0, 40.0, -19.0, 40.0, -19.0, -10.0, -50.0, -10.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fx:id="imgLumberJackPlayer" fitHeight="52.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images-world/warrior-back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="lblLumberInteract" layoutX="378.0" layoutY="11.0" text="Press E to Interact" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="80.0" fitWidth="60.0" layoutX="403.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images-world/lumberjack-left.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="plyLumberInteract" fill="DODGERBLUE" layoutX="278.0" layoutY="130.0" points="64.0, -130.0, 64.0, 47.0, 277.0, 47.0, 277.0, 12.0, 115.0, 12.0, 115.0, -130.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancLumberYard" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <ImageView fx:id="imgYard" fitHeight="365.0" fitWidth="555.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../maps/lumberClearing.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="60.0" layoutX="48.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+               <image>
+                  <Image url="@../Images-Inventory/redLeft.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="polLumberYardWalls" fill="DODGERBLUE" layoutX="50.0" layoutY="284.0" points="-50.0, 40.0, -41.0, 33.0, -41.0, -271.0, 293.0, -271.0, 274.0, -219.0, 229.0, -204.0, 229.0, -137.0, 245.0, -45.0, 307.0, -31.0, 322.0, 33.0, -41.0, 33.0, -50.0, 39.75, 505.0, 39.75, 505.0, -181.0, 505.0, -284.0, -50.0, -284.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Polygon fx:id="polLumberYardEntry" fill="DODGERBLUE" layoutX="79.0" layoutY="284.0" points="-50.0, 40.0, 50.0, 40.0, 50.0, 26.0, -50.0, 26.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Pane fx:id="panLumberYardPlayer" layoutX="69.0" layoutY="245.0" prefHeight="52.0" prefWidth="31.0">
+               <children>
+                  <Polygon fx:id="polLumberYardPlayer" fill="DODGERBLUE" layoutX="49.0" layoutY="10.0" points="-50.0, 40.0, -19.0, 40.0, -19.0, -10.0, -50.0, -10.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fx:id="imgLumberYardPlayer" fitHeight="52.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images-world/warrior-back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Polygon fx:id="polLogCollect" fill="DODGERBLUE" layoutX="328.0" layoutY="277.0" points="0.0, 22.0, 50.0, 40.0, 16.0, -20.0, -40.0, -31.0, -40.0, -99.0, -59.0, -124.0, -59.0, -192.0, 38.0, -277.0, -40.0, -256.0, -80.0, -227.0, -89.0, -124.0, -59.0, 1.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Label fx:id="lblLogCollect" focusTraversable="false" layoutX="52.0" layoutY="66.0" text="Press E to interact" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancShopMenu" layoutX="15.0" layoutY="15.0" prefHeight="297.0" prefWidth="265.0" visible="false">
+         <children>
+            <ImageView fitHeight="297.0" fitWidth="265.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/panel_beige.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="153.0" layoutX="56.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_brown.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblSeller" alignment="CENTER" layoutX="44.0" layoutY="14.0" prefHeight="35.0" prefWidth="174.0" text="Shopkeeper">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="103.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="135.0" layoutX="22.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_brown.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblSell" alignment="CENTER" layoutX="27.0" layoutY="221.0" onMouseClicked="#sell" prefHeight="27.0" prefWidth="124.0" text="Sell Herbs">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRate" layoutX="165.0" layoutY="221.0" text="1g / each">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgItem" fitHeight="45.0" fitWidth="41.0" layoutX="114.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Item-Sprites/hunterBow.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgLeft" fitHeight="45.0" fitWidth="41.0" layoutX="65.0" layoutY="77.0" onMouseClicked="#shopIndex" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images-Inventory/left.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgRight" fitHeight="45.0" fitWidth="41.0" layoutX="159.0" layoutY="77.0" onMouseClicked="#shopIndex" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/right.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblStats" alignment="TOP_LEFT" layoutX="112.0" layoutY="133.0" prefHeight="80.0" prefWidth="135.0" text="Power: 100&#10;Durability: 100&#10;Cost: 100&#10;&#10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblResources" alignment="CENTER" layoutX="22.0" layoutY="252.0" prefHeight="27.0" prefWidth="100.0" text="Herbs: 100&#10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblGold" alignment="CENTER" layoutX="144.0" layoutY="252.0" prefHeight="27.0" prefWidth="100.0" text="Gold: 100g&#10;&#10;&#10;&#10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="82.0" layoutX="24.0" layoutY="153.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_brown.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="156.0" onMouseClicked="#buy" prefHeight="27.0" prefWidth="79.0" text="Buy">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancInventory" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="425.0" stylesheets="@../styles/customStyles.css" visible="false">
+         <children>
+            <ImageView fx:id="imgInv" fitHeight="440.0" fitWidth="663.0" layoutX="-10.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../Images-Inventory/panel_beige.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="112.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_brown.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="60.0" layoutY="14.0" prefHeight="65.0" prefWidth="305.0" text="Your Inventory" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="189.0" layoutX="18.0" layoutY="263.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="189.0" layoutX="18.0" layoutY="308.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="189.0" layoutX="18.0" layoutY="353.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="14.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="74.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="134.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="44.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="104.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblHerbs" alignment="CENTER" layoutX="26.0" layoutY="268.0" prefHeight="27.0" prefWidth="174.0" text="You Have: 100 Herbs">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLogs" alignment="CENTER" layoutX="17.0" layoutY="313.0" prefHeight="27.0" prefWidth="189.0" text="You Have: 100 Logs">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRocks" alignment="CENTER" layoutX="17.0" layoutY="358.0" prefHeight="27.0" prefWidth="189.0" text="You Have: 100 Stone">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="252.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="99.0" layoutX="312.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblDmgProt" layoutX="229.0" layoutY="108.0" prefHeight="27.0" prefWidth="95.0" text="Damage">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="229.0" layoutY="133.0" prefHeight="27.0" prefWidth="95.0" text="Durability">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDmgProtAmnt" layoutX="324.0" layoutY="108.0" prefHeight="27.0" prefWidth="95.0" text=": 0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDurabilityAmnt" layoutX="324.0" layoutY="132.0" prefHeight="27.0" prefWidth="95.0" text=": 0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgInv1" fitHeight="45.0" fitWidth="41.0" layoutX="24.0" layoutY="118.0" onMouseClicked="#slot" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgInv2" fitHeight="45.0" fitWidth="41.0" layoutX="83.0" layoutY="118.0" onMouseClicked="#slot" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgInv3" fitHeight="45.0" fitWidth="41.0" layoutX="143.0" layoutY="118.0" onMouseClicked="#slot" pickOnBounds="true" preserveRatio="true" styleClass="round-button-border" />
+            <ImageView fx:id="imgInv4" fitHeight="45.0" fitWidth="41.0" layoutX="53.0" layoutY="183.0" onMouseClicked="#slot" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgInv5" fitHeight="45.0" fitWidth="41.0" layoutX="113.0" layoutY="183.0" onMouseClicked="#slot" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgEqp1" fitHeight="45.0" fitWidth="41.0" layoutX="261.0" layoutY="327.0" onMouseClicked="#slot" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Item-Sprites/shortSword.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgEqp2" fitHeight="45.0" fitWidth="41.0" layoutX="321.0" layoutY="327.0" onMouseClicked="#slot" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Item-Sprites/clothArmour.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="105.0" layoutX="250.0" layoutY="174.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_blue.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="250.0" layoutY="177.0" onMouseClicked="#btnEquip" prefHeight="27.0" prefWidth="105.0" text="Equip">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="60.0" layoutX="30.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonSquare_brown.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="36.0" layoutY="21.0" onMouseClicked="#btnReturn" prefHeight="52.0" prefWidth="48.0" text="Return&#10;to &#10;Menu" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="189.0" layoutX="215.0" layoutY="263.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_brown.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblPotions" alignment="CENTER" layoutX="215.0" layoutY="268.0" prefHeight="27.0" prefWidth="189.0" text="You Have: 100 Potions">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBalance" alignment="CENTER" layoutX="96.0" layoutY="72.0" prefHeight="27.0" prefWidth="95.0" text="Gold: 0g">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="105.0" layoutX="250.0" layoutY="215.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_blue.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="250.0" layoutY="218.0" onMouseClicked="#btnDestroy" prefHeight="27.0" prefWidth="105.0" text="Destroy">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHealth" alignment="CENTER" layoutX="215.0" layoutY="72.0" prefHeight="27.0" prefWidth="95.0" text="Health: 100">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="82.0" layoutX="321.0" layoutY="72.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images-Inventory/buttonLong_blue.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="321.0" layoutY="72.0" onMouseClicked="#btnPotion" prefHeight="27.0" prefWidth="82.0" text="Use Potion">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgQuest1" fitHeight="30.0" fitWidth="28.0" layoutX="372.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Item-Sprites/axe.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgQuest2" fitHeight="30.0" fitWidth="31.0" layoutX="371.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Item-Sprites/pickaxe.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgQuest3" fitHeight="30.0" fitWidth="31.0" layoutX="371.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Item-Sprites/pickaxe-upgrade.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblContinue" layoutX="230.0" layoutY="195.0" text="Press SPACE to continue..." textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStory" alignment="CENTER" layoutY="215.0" prefHeight="224.0" prefWidth="395.0" styleClass="gradient-light-brown-double-border" stylesheets="@../styles/customStyles.css" text="&#10;" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

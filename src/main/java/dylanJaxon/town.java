@@ -1571,7 +1571,6 @@ public class town implements Initializable {
                     "As promised I will award you with\n2000 gold and a manor in the city.");
             MainApp.you.increaseBalance(2000);
         }
-        MainApp.you.increaseBalance(-4000);
 
         //start music
 //        a = new MediaPlayer((new Media(getClass().getResource("/music/town.mp3").toString())));
